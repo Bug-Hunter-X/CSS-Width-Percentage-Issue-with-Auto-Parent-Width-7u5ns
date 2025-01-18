@@ -1,0 +1,14 @@
+To fix this issue, ensure that the parent container has its width explicitly defined.  For example:
+
+```css
+.container {
+  width: 100%; /* Or a specific pixel width */
+}
+
+div {
+  width: 50%;
+  float: left;
+}
+```
+
+By setting the parent container's width to `100%` (or a fixed pixel value), you ensure that the child element's `width: 50%;` will correctly occupy 50% of the parent's available space.  Alternatively, if a flexible layout is desired, consider using flexbox or grid for better control over element sizing.
