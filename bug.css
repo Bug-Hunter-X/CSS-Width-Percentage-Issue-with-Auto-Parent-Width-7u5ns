@@ -1,0 +1,10 @@
+The following CSS code causes unexpected behavior in some browsers:
+
+```css
+div {
+  width: 50%;
+  float: left;
+}
+```
+
+The issue is that if the parent container does not have a specified width, the `width: 50%;` rule will not work as expected.  Instead of occupying half the parent's width, the `div` elements may collapse or occupy the full width of the browser window. This is because the percentage width is relative to the parent container's width, and if the parent's width is not set, it defaults to `auto`, which can be interpreted differently by different browsers.
